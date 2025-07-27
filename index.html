@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuvan Manideep Bheemavarapu | Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-black fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Yuvan's Portfolio</a>
+      <ul class="navbar-nav flex-row gap-4">
+        <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <h1>Yuvan Manideep<br>Bheemavarapu</h1>
+    <div class="tagline">Web Developer | Tech Enthusiast</div>
+    <a href="#projects" class="btn btn-red mt-4">View My Work</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container py-5">
+    <h2 class="section-title">About Me</h2>
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="data:image/jpeg;base64,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" class="img-fluid rounded-circle" alt="Profile" />
+      </div>
+      <div class="col-md-8">
+        <p>I’m Yuvan — a Full Stack Developer and passionate Tech Enthusiast who thrives on building dynamic, user-friendly web applications. From designing clean frontends with React to structuring robust backends with Node.js and Express, I love working across the stack to bring ideas to life.
+
+Whether I’m experimenting with APIs, integrating AI, or debugging that one elusive error, I’m constantly learning, creating, and leveling up.
+
+Currently exploring AI chatbots, cloud deployment, and building digital experiences that are both smart and sleek.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container py-5">
+    <h2 class="section-title">Projects</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card project-card bg-dark text-light">
+          <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/477e60ca-b9b3-43e9-976c-81f286c54975.png" class="card-img-top" alt="Project" />
+          <div class="card-body">
+            <h5 class="card-title">FotoFam</h5>
+            <p class="card-text">FotoFam is a collaborative photo-sharing web app built during our second year of college. Designed with simplicity in mind, it allows multiple family members to post and view photos under a single shared account — no need for individual logins.
+
+Think of it as a mini family Instagram, where moments can be uploaded, viewed like posts, and cherished together. It’s a compact full-stack project aimed at building closer digital bonds within families.</p>
+            <a href="https://github.com/yuvanmanideep6/foto-fam" class="btn btn-sm btn-outline-light">GitHub</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card project-card bg-dark text-light">
+          <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/6486aad8-d2b6-4735-b195-d68d230e7019.png" class="card-img-top" alt="Project" />
+          <div class="card-body">
+            <h5 class="card-title">Brownstone Boys</h5>
+            <p class="card-text">Brownstone Boys is a fully functional e-commerce web application developed as a student project to demonstrate core full-stack development skills. The platform allows users to browse, add to cart, and purchase aesthetic clothing items such as shirts, pants, and footwear.
+
+Built with a focus on responsive design and intuitive UX, the application simulates a real-world online store, complete with user authentication, product filtering, shopping cart management, and order checkout flow.</p>
+            <a href="https://github.com/yuvanmanideep6/brownstone-boys" class="btn btn-sm btn-outline-light">GitHub</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card project-card bg-dark text-light">
+          <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/f89f5863-a6d1-42d3-bfbf-bb9eba1a9fbf.png" class="card-img-top" alt="Project" />
+          <div class="card-body">
+            <h5 class="card-title">To-Do List</h5>
+            <p class="card-text">To-Do List is a simple yet functional web application built to practice front-end development concepts such as DOM manipulation, state handling, and dynamic rendering. This project allows users to create, edit, and delete daily tasks in a clean, distraction-free interface.
+
+Developed as part of a learning sprint, the app focuses on core JavaScript logic, responsive design, and minimal but intuitive UI to simulate the core features of a productivity tool.</p>
+            <a href="https://github.com/yuvanmanideep6/to-do-list" class="btn btn-sm btn-outline-light">GitHub</a>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- More projects go here -->
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="container py-5">
+    <h2 class="section-title">Skills</h2>
+    <div class="text-center">
+      <i class="fab fa-html5 skill-icon"></i>
+      <i class="fab fa-css3-alt skill-icon"></i>
+      <i class="fab fa-js skill-icon"></i>
+      <i class="fab fa-bootstrap skill-icon"></i>
+      <i class="fab fa-jquery skill-icon"></i>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container py-5">
+    <h2 class="section-title">Contact Me</h2>
+    <form id="contactForm">
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" value="Yuvan Manideep Bheemavarapu" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" value="yuvanmanideep6@gmail.com" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-red">Send Message</button>
+    </form>
+    <div class="mt-4 text-center">
+      <a href="https://github.com/yuvanmanideep6" class="me-3"><i class="fab fa-github fa-2x text-white"></i></a>
+      <a href="https://www.linkedin.com/in/yuvanmanideepbheemavarapu/" class="me-3"><i class="fab fa-linkedin fa-2x text-white"></i></a>
+      <a href="https://www.instagram.com/yuvanmanideep6/"><i class="fab fa-instagram fa-2x text-white"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Yuvan Manideep Bheemavarapu. All rights reserved.</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop">⬆</button>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
