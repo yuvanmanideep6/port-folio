@@ -2,9 +2,7 @@ $(document).ready(function () {
 
   console.log("JS Loaded Successfully");
 
-  // =============================
   // Smooth Scroll
-  // =============================
   $('a.nav-link').click(function (e) {
     e.preventDefault();
     $('html, body').animate({
@@ -12,9 +10,7 @@ $(document).ready(function () {
     }, 800);
   });
 
-  // =============================
   // Back To Top Button
-  // =============================
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
       $('#backToTop').fadeIn();
@@ -29,42 +25,34 @@ $(document).ready(function () {
 
 });
 
-// =============================
-// EMAILJS INITIALIZATION
-// =============================
+// Initialize EmailJS
 (function () {
-  emailjs.init("WEm4jFFGVyUem7_OD"); // <-- replace with your Public Key
+  emailjs.init("WEm4jFFGVyUem7_OD");
 })();
 
-
-// =============================
-// CONTACT FORM SUBMIT (WORKING VERSION)
-// =============================
+// Contact Form Submit
 document.getElementById("contactForm")
 .addEventListener("submit", function (e) {
 
-  e.preventDefault(); // stops page refresh
+  e.preventDefault();
 
   const status = document.getElementById("formStatus");
   status.innerText = "Sending message...";
 
   emailjs.sendForm(
-    "service_8c6sypt",   // <-- replace
-    "template_avcvlac",  // <-- replace
+    "service_8c6sypt",
+    "template_avcvlac",
     this
   )
   .then(function () {
-
     status.innerText =
       "✅ Message sent successfully! I'll get back to you soon.";
     document.getElementById("contactForm").reset();
-
   })
   .catch(function (error) {
-
     status.innerText =
-      "❌ Failed to send message. Please try again.";
-    console.error("EmailJS Error:", error);
+      "❌ Failed to send message.";
+    console.error(error);
   });
 
 });
