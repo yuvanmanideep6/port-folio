@@ -19,6 +19,10 @@ h1, h2, h3 {
   padding: 0.8rem 1rem;
 }
 
+/* ============================= */
+/* Hero Section */
+/* ============================= */
+
 .hero {
   height: 100vh;
   background: #000;
@@ -53,6 +57,10 @@ h1, h2, h3 {
   50% { border-color: var(--main-red); }
 }
 
+/* ============================= */
+/* Buttons */
+/* ============================= */
+
 .btn-red {
   background: var(--main-red);
   color: white;
@@ -63,22 +71,79 @@ h1, h2, h3 {
   background: #ff4d58;
 }
 
+/* ============================= */
+/* Section Titles */
+/* ============================= */
+
 .section-title {
   text-align: center;
   margin-bottom: 2rem;
   color: var(--main-red);
 }
 
+/* ============================= */
+/* Project Cards */
+/* ============================= */
+
 .project-card:hover {
   border: 2px solid var(--main-red);
   box-shadow: 0 0 10px var(--main-red);
 }
+
+/* ============================= */
+/* Old Skill Icons (kept for safety) */
+/* ============================= */
 
 .skill-icon {
   font-size: 2rem;
   margin: 0.5rem;
   color: var(--main-red);
 }
+
+/* ============================= */
+/* Skills Section Upgrade */
+/* ============================= */
+
+#skills {
+  margin-top: 20px;
+}
+
+.skill-heading {
+  font-weight: 600;
+  color: var(--main-red);
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+#skills p {
+  margin: 6px 0;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* subtle hover animation */
+#skills p:hover {
+  transform: translateX(6px);
+  color: var(--main-red);
+  opacity: 1;
+}
+
+/* soft hover card effect */
+#skills .col-md-3 {
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+#skills .col-md-3:hover {
+  background: rgba(230, 57, 70, 0.08);
+  box-shadow: 0 0 12px rgba(230, 57, 70, 0.3);
+}
+
+/* ============================= */
+/* Back To Top Button */
+/* ============================= */
 
 #backToTop {
   position: fixed;
@@ -92,6 +157,10 @@ h1, h2, h3 {
   padding: 10px 15px;
   cursor: pointer;
 }
+
+/* ============================= */
+/* Footer */
+/* ============================= */
 
 footer {
   text-align: center;
