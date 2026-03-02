@@ -1,5 +1,8 @@
 $(document).ready(function () {
+
+  // =============================
   // Smooth scroll
+  // =============================
   $('a.nav-link').click(function (e) {
     e.preventDefault();
     $('html, body').animate({
@@ -7,7 +10,9 @@ $(document).ready(function () {
     }, 800);
   });
 
-  // Back to top
+  // =============================
+  // Back to top button
+  // =============================
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
       $('#backToTop').fadeIn();
@@ -20,12 +25,46 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: 0 }, 800);
   });
 
-  // Form validation
+  // =============================
+  // EMAILJS INITIALIZATION
+  // =============================
+  (function () {
+    emailjs.init("YOUR_PUBLIC_KEY"); // <-- replace
+  })();
+
+  // =============================
+  // Contact Form Submit
+  // =============================
   $('#contactForm').on('submit', function (e) {
+
+    e.preventDefault();
+
     const email = $(this).find('input[type="email"]').val();
+
+    // Simple validation
     if (!email.includes('@')) {
-      e.preventDefault();
       alert('Please enter a valid email address.');
+      return;
     }
+
+    const status = $('#formStatus');
+    status.text("Sending message...");
+
+    emailjs.sendForm(
+      "YOUR_SERVICE_ID",   // <-- replace
+      "YOUR_TEMPLATE_ID",  // <-- replace
+      this
+    ).then(function () {
+
+      status.text("✅ Message sent successfully! I'll get back to you soon.");
+      $('#contactForm')[0].reset();
+
+    }, function (error) {
+
+      status.text("❌ Failed to send message. Please try again.");
+      console.error(error);
+    });
+
   });
+
 });
