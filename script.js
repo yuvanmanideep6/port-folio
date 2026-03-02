@@ -41,7 +41,7 @@ document.getElementById("contactForm")
 
   emailjs.sendForm(
     "service_8c6sypt",
-    "template_avcvlac",
+    "template_0sjmt6k",
     this
   )
   .then(function () {
@@ -56,3 +56,4 @@ document.getElementById("contactForm")
   });
 
 });
+
