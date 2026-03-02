@@ -1,7 +1,9 @@
 $(document).ready(function () {
 
+  console.log("JS Loaded Successfully");
+
   // =============================
-  // Smooth scroll
+  // Smooth Scroll
   // =============================
   $('a.nav-link').click(function (e) {
     e.preventDefault();
@@ -11,7 +13,7 @@ $(document).ready(function () {
   });
 
   // =============================
-  // Back to top button
+  // Back To Top Button
   // =============================
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
@@ -25,48 +27,44 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: 0 }, 800);
   });
 
-  // =============================
-  // EMAILJS INITIALIZATION
-  // =============================
-  (function () {
-    emailjs.init("WEm4jFFGVyUem7_OD
-"); // <-- replace
-  })();
+});
 
-  // =============================
-  // Contact Form Submit
-  // =============================
-  $('#contactForm').on('submit', function (e) {
+// =============================
+// EMAILJS INITIALIZATION
+// =============================
+(function () {
+  emailjs.init("WEm4jFFGVyUem7_OD"); // <-- replace with your Public Key
+})();
 
-    e.preventDefault();
 
-    const email = $(this).find('input[type="email"]').val();
+// =============================
+// CONTACT FORM SUBMIT (WORKING VERSION)
+// =============================
+document.getElementById("contactForm")
+.addEventListener("submit", function (e) {
 
-    // Simple validation
-    if (!email.includes('@')) {
-      alert('Please enter a valid email address.');
-      return;
-    }
+  e.preventDefault(); // stops page refresh
 
-    const status = $('#formStatus');
-    status.text("Sending message...");
+  const status = document.getElementById("formStatus");
+  status.innerText = "Sending message...";
 
-    emailjs.sendForm(
-      "service_8c6sypt",   // <-- replace
-      "template_avcvlac",  // <-- replace
-      this
-    ).then(function () {
+  emailjs.sendForm(
+    "service_8c6sypt",   // <-- replace
+    "template_avcvlac",  // <-- replace
+    this
+  )
+  .then(function () {
 
-      status.text("✅ Message sent successfully! I'll get back to you soon.");
-      $('#contactForm')[0].reset();
+    status.innerText =
+      "✅ Message sent successfully! I'll get back to you soon.";
+    document.getElementById("contactForm").reset();
 
-    }, function (error) {
+  })
+  .catch(function (error) {
 
-      status.text("❌ Failed to send message. Please try again.");
-      console.error(error);
-    });
-
+    status.innerText =
+      "❌ Failed to send message. Please try again.";
+    console.error("EmailJS Error:", error);
   });
 
 });
-
