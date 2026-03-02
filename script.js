@@ -29,7 +29,8 @@ $(document).ready(function () {
   // EMAILJS INITIALIZATION
   // =============================
   (function () {
-    emailjs.init("YOUR_PUBLIC_KEY"); // <-- replace
+    emailjs.init("WEm4jFFGVyUem7_OD
+"); // <-- replace
   })();
 
   // =============================
@@ -51,8 +52,8 @@ $(document).ready(function () {
     status.text("Sending message...");
 
     emailjs.sendForm(
-      "YOUR_SERVICE_ID",   // <-- replace
-      "YOUR_TEMPLATE_ID",  // <-- replace
+      "service_8c6sypt",   // <-- replace
+      "template_avcvlac",  // <-- replace
       this
     ).then(function () {
 
@@ -68,3 +69,4 @@ $(document).ready(function () {
   });
 
 });
+
