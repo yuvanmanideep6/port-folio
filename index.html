@@ -120,20 +120,28 @@ Developed as part of a learning sprint, the app focuses on core JavaScript logic
   <section id="contact" class="container py-5">
     <h2 class="section-title">Contact Me</h2>
     <form id="contactForm">
-      <div class="mb-3">
-        <label class="form-label">Name</label>
-        <input type="text" class="form-control" value="Yuvan Manideep Bheemavarapu" required />
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-control" value="yuvanmanideep6@gmail.com" required />
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Message</label>
-        <textarea class="form-control" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-red">Send Message</button>
-    </form>
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input type="text" name="from_name" class="form-control"
+      placeholder="Your Name" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input type="email" name="from_email" class="form-control"
+      placeholder="Your Email" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Message</label>
+    <textarea name="message" class="form-control"
+      placeholder="Type your message..." required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-red">Send Message</button>
+</form>
+
+<p id="formStatus" class="text-center mt-3"></p>
     <div class="mt-4 text-center">
       <a href="https://github.com/yuvanmanideep6" class="me-3"><i class="fab fa-github fa-2x text-white"></i></a>
       <a href="https://www.linkedin.com/in/yuvanmanideepbheemavarapu/" class="me-3"><i class="fab fa-linkedin fa-2x text-white"></i></a>
@@ -151,7 +159,9 @@ Developed as part of a learning sprint, the app focuses on core JavaScript logic
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
+
 
